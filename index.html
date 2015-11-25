@@ -1,0 +1,163 @@
+
+<head>
+	<style>
+		body {background-color:gray}
+	</style>
+
+	<script "text/javascript" src="metronome.js"></script>
+	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+
+
+<body>
+<!-- UNNESNESARY
+	<img src="drawing.svg" alt="drawing" style="width:500px;height:500px;">
+-->
+
+<div id='svgContainer'></div>
+
+
+
+
+
+
+<script type="text/javascript">
+xhr = new XMLHttpRequest();
+xhr.open("GET","diagram_import.svg",true);
+// Following line is just to be on the safe side;
+// not needed if your server delivers SVG with correct MIME type
+//xhr.overrideMimeType("image/svg+xml");
+xhr.onload = function(e){
+	document.getElementById("svgContainer")
+	.appendChild(xhr.responseXML.documentElement);
+
+	// inputs
+	var speed = 1000;
+
+	// immediately make transparent
+	var pathLyr2 = d3.select('#svgContainer').select('#layer2').selectAll('path');
+	var rect3 = d3.select('#svgContainer').select('#layer3').selectAll('rect');
+	rect3.style('stroke-opacity',0.0);
+	var rect4 = d3.select('#svgContainer').select('#layer4').selectAll('rect');
+	rect4.style('fill-opacity',0.0);
+	var text4 = d3.select('#svgContainer').select('#layer4').selectAll('text');
+	text4.style('fill-opacity',0.0);
+
+	var pathLyr7 = d3.select('#svgContainer').select('#layer7').selectAll('path');
+	pathLyr7.style('stroke-opacity',0.0);
+	var rect7 = d3.select('#svgContainer').select('#layer7').selectAll('rect');
+	rect7.style('stroke-opacity',0.0);
+	var text7 = d3.select('#svgContainer').select('#layer7').selectAll('text');
+	text7.style('stroke-opacity',0.0);
+	text7.style('font-size','0px');
+
+
+	
+	// get lines
+	var path1 = document.getElementById("path4145");
+	var length1 = path1.getTotalLength();
+	console.log(length1);
+	var path2 = document.getElementById("path4147");
+	var length2 = path2.getTotalLength();
+	console.log(length2);
+	var path3 = document.getElementById("path4149");
+	var length3 = path3.getTotalLength();
+	console.log(length3);
+
+	// applying 'drawing' style
+	path1.style.strokeDasharray = length1 + ' ' + length1;
+	path1.style.strokeDashoffset = length1;
+	path2.style.strokeDasharray = length2 + ' ' + length2;
+	path2.style.strokeDashoffset = length2;
+	path3.style.strokeDasharray = length3 + ' ' + length3;
+	path3.style.strokeDashoffset = length3;
+
+	
+	// frame based animation
+	Metronome({
+	  type: 'frame',
+	  frames: 30,
+	  //type: 'duration',
+	  //duration: 3000,
+	  easing: 'easeInOutQuad',
+	  draw: function(handle, progress) {
+	  	//explanation: http://jakearchibald.com/2013/animated-line-drawing-svg/
+	    path1.style.strokeDashoffset = Math.floor(length1 * (1 - progress));
+	    path2.style.strokeDashoffset = Math.floor(length2 * (1 - progress));
+	    path3.style.strokeDashoffset = Math.floor(length3 * (1 - progress));
+
+	  },
+	  complete: function() {
+	    console.log('Jerbs done');
+
+	    //begin fading in
+	    rect3.transition()
+	    	.duration(speed)
+	    	.style('stroke-opacity',1.0)
+
+	    pathLyr2.transition()
+	    	.duration(speed)
+	    	.style('stroke-opacity',0.0);
+
+	    rect4.transition()
+	    	.delay(speed)
+	    	.duration(speed)
+	    	.style('fill-opacity',1.0);
+
+	    text4.transition()
+	    	.delay(speed)
+	    	.duration(speed)
+	    	.style('fill-opacity',1.0);
+
+	    rect3.transition()
+	    	.delay(speed)
+	    	.duration(speed)
+	    	.style('stroke-opacity',0.0);
+
+
+
+
+		pathLyr7.transition()
+	    	.delay(speed)
+	    	.duration(speed)
+	    	.style('stroke-opacity',1.0);
+
+		rect7.transition()
+	    	.delay(speed)
+	    	.duration(speed)
+	    	.style('stroke-opacity',1.0);
+
+		text7.transition()
+	    	.delay(speed)
+	    	.duration(speed)
+	    	.style('stroke-opacity',1.0)
+	    	.style('font-size','7px');
+
+	  }
+	});
+};
+
+xhr.onerror = function (e) {
+  console.error(xhr.statusText);
+};
+xhr.send("");
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

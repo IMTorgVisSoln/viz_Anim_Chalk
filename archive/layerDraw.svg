@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg4136"
+   viewBox="0 0 297 210"
+   height="100mm"
+   width="200mm">
+  <defs
+     id="defs4138">
+    <filter
+       id="filter4151"
+       style="color-interpolation-filters:sRGB;"
+       width="1.3"
+       x="-0.15"
+       height="1.3"
+       y="-0.15">
+      <feTurbulence
+         id="feTurbulence4153"
+         result="result4"
+         seed="0"
+         numOctaves="5"
+         baseFrequency="0.04"
+         type="fractalNoise" />
+      <feDisplacementMap
+         id="feDisplacementMap4155"
+         result="result3"
+         scale="10"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         in2="result4"
+         in="SourceGraphic" />
+      <feDiffuseLighting
+         id="feDiffuseLighting4157"
+         in="result4"
+         result="result1"
+         surfaceScale="2"
+         diffuseConstant="1"
+         lighting-color="rgb(233,230,215)">
+        <feDistantLight
+           id="feDistantLight4159"
+           elevation="40"
+           azimuth="235" />
+      </feDiffuseLighting>
+      <feComposite
+         id="feComposite4161"
+         result="result2"
+         in2="result1"
+         in="result3"
+         operator="in" />
+      <feComposite
+         id="feComposite4163"
+         k1="1.7"
+         operator="arithmetic"
+         result="result5"
+         in2="result1" />
+      <feBlend
+         id="feBlend4165"
+         mode="normal"
+         in2="result3"
+         in="result5" />
+    </filter>
+    <filter
+       id="filter4167"
+       style="color-interpolation-filters:sRGB;"
+       width="1.3"
+       x="-0.15"
+       height="1.3"
+       y="-0.15">
+      <feTurbulence
+         id="feTurbulence4169"
+         result="result4"
+         seed="0"
+         numOctaves="5"
+         baseFrequency="0.04"
+         type="fractalNoise" />
+      <feDisplacementMap
+         id="feDisplacementMap4171"
+         result="result3"
+         scale="10"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         in2="result4"
+         in="SourceGraphic" />
+      <feDiffuseLighting
+         id="feDiffuseLighting4173"
+         in="result4"
+         result="result1"
+         surfaceScale="2"
+         diffuseConstant="1"
+         lighting-color="rgb(233,230,215)">
+        <feDistantLight
+           id="feDistantLight4175"
+           elevation="40"
+           azimuth="235" />
+      </feDiffuseLighting>
+      <feComposite
+         id="feComposite4177"
+         result="result2"
+         in2="result1"
+         in="result3"
+         operator="in" />
+      <feComposite
+         id="feComposite4179"
+         k1="1.7"
+         operator="arithmetic"
+         result="result5"
+         in2="result1" />
+      <feBlend
+         id="feBlend4181"
+         mode="normal"
+         in2="result3"
+         in="result5" />
+    </filter>
+    <filter
+       id="filter4183"
+       style="color-interpolation-filters:sRGB;"
+       width="1.3"
+       x="-0.15"
+       height="1.3"
+       y="-0.15">
+      <feTurbulence
+         id="feTurbulence4185"
+         result="result4"
+         seed="0"
+         numOctaves="5"
+         baseFrequency="0.04"
+         type="fractalNoise" />
+      <feDisplacementMap
+         id="feDisplacementMap4187"
+         result="result3"
+         scale="10"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         in2="result4"
+         in="SourceGraphic" />
+      <feDiffuseLighting
+         id="feDiffuseLighting4189"
+         in="result4"
+         result="result1"
+         surfaceScale="2"
+         diffuseConstant="1"
+         lighting-color="rgb(233,230,215)">
+        <feDistantLight
+           id="feDistantLight4191"
+           elevation="40"
+           azimuth="235" />
+      </feDiffuseLighting>
+      <feComposite
+         id="feComposite4193"
+         result="result2"
+         in2="result1"
+         in="result3"
+         operator="in" />
+      <feComposite
+         id="feComposite4195"
+         k1="1.7"
+         operator="arithmetic"
+         result="result5"
+         in2="result1" />
+      <feBlend
+         id="feBlend4197"
+         mode="normal"
+         in2="result3"
+         in="result5" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata4142">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer2">
+    <path
+       id="path4145"
+       d="m 176.05,48.997012 -74.10652,0 -5.266452,6.771151 -1.504702,16.175536 8.652034,5.266453 115.86196,-1.128528 5.26645,-6.018801 -0.37617,-13.918483 -0.75235,-4.137928 -3.00941,-2.633226 z"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4183)" />
+    <path
+       id="path4147"
+       d="m 176.05,77.962503 -72.97799,-2.633227 -4.514107,1.880876 -2.257049,3.385577 0,4.137925 1.504698,16.551706 2.257048,1.88088 3.76176,1.5047 50.78365,-0.75235 65.83066,1.88088 3.76175,-2.63323 0.75235,-4.137926 -4.89028,-20.689637 z"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4167)" />
+    <path
+       id="path4149"
+       d="m 195.61111,108.05652 -23.32287,-0.75235 -39.49839,0.75235 -31.22254,0 -3.761758,2.25705 -0.75235,2.25705 -0.376174,15.79936 2.257052,2.63323 6.77115,4.13792 17.30406,-0.37617 31.59872,0.75235 31.59872,-0.75235 33.47959,0.37617 7.14733,-6.77115 -0.37618,-11.66143 -5.26645,-9.02821 z"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4151)" />
+  </g>
+</svg>
